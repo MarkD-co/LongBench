@@ -8,8 +8,10 @@ from openai import OpenAI
 from transformers import AutoTokenizer
 import tiktoken
 import torch.multiprocessing as mp
+from modelscope.msdatasets import MsDataset
 
 model_map = json.loads(open('config/model2path.json', encoding='utf-8').read())
+print(model_map)
 maxlen_map = json.loads(open('config/model2maxlen.json', encoding='utf-8').read())
 
 URL = "http://127.0.0.1:8000/v1"
@@ -124,7 +126,8 @@ def main():
     else:
         out_file = os.path.join(args.save_dir, args.model.split("/")[-1] + ".jsonl")
 
-    dataset = load_dataset('THUDM/LongBench-v2', split='train') # dataset = json.load(open('data.json', 'r', encoding='utf-8'))
+    #dataset = MsDataset.load('ZhipuAI/LongBench-v2') # 
+    dataset = json.load(open('/cpfs01/projects-HDD/cfff-4da39d3c1e4e_HDD/mkd_25213050298/LongBench/LongBench/LongBench/dataset/LongBench_v2/data.json', 'r', encoding='utf-8'))
     data_all = [{"_id": item["_id"], "domain": item["domain"], "sub_domain": item["sub_domain"], "difficulty": item["difficulty"], "length": item["length"], "question": item["question"], "choice_A": item["choice_A"], "choice_B": item["choice_B"], "choice_C": item["choice_C"], "choice_D": item["choice_D"], "answer": item["answer"], "context": item["context"]} for item in dataset]
 
     # cache

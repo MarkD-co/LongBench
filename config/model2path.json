@@ -9,5 +9,8 @@
     "Mistral-Large-Instruct-2407": "mistralai/Mistral-Large-Instruct-2407",
     "Mistral-Large-Instruct-2411": "mistralai/Mistral-Large-Instruct-2411",
     "c4ai-command-r-plus-08-2024": "CohereForAI/c4ai-command-r-plus-08-2024",
-    "glm-4-plus": "THUDM/glm-4-9b-chat"
+    "chatglm3-6b-32k": "/cpfs01/projects-HDD/cfff-4da39d3c1e4e_HDD/mkd_25213050298/Transformer_loki/loki/model/chatGLM/chatglm3-6b-32k",
+    "glm-4-plus": "THUDM/glm-4-9b-chat",
+    "llama2-7b": "/cpfs01/projects-HDD/cfff-4da39d3c1e4e_HDD/mkd_25213050298/Transformer_loki/loki/model/Llama-2-7b-hf"
+
 }

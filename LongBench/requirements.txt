@@ -4,5 +4,12 @@ rouge
 jieba
 fuzzywuzzy
 torch
-transformers==4.31.0
+transformers==4.48.0
 einops
+bitsandbytes
+protobuf
+tiktoken
+sentencepiece
+fastchat
+psutil
+accelerate
